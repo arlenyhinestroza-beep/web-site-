@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Connection | Communication Workshop</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#E0F2F1',
+                            DEFAULT: '#009688', // Teal
+                            dark: '#004D40',
+                            accent: '#FF7043'  // Deep Orange
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.6)), url('https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fa-solid fa-hands-holding-circle text-brand text-3xl"></i>
+                        <span class="font-serif font-bold text-xl text-brand-dark">Family Connection</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-brand font-medium transition">Home</a>
+                    <a href="#program" class="text-gray-600 hover:text-brand font-medium transition">The Program</a>
+                    <a href="#location" class="text-gray-600 hover:text-brand font-medium transition">Location</a>
+                    <a href="#register" class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full font-bold transition shadow-lg transform hover:-translate-y-0.5">
+                        Register Today
+                    </a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-3 px-4 text-gray-600 hover:bg-brand-light">Home</a>
+            <a href="#program" class="block py-3 px-4 text-gray-600 hover:bg-brand-light">The Program</a>
+            <a href="#location" class="block py-3 px-4 text-gray-600 hover:bg-brand-light">Location</a>
+            <a href="#register" class="block py-3 px-4 text-brand font-bold hover:bg-brand-light">Register</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-screen min-h-[600px] flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto text-white">
+            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Transform Communication in Your Home
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 font-light opacity-90">
+                A practical 3-session workshop designed for families who want to listen better, resolve conflicts, and strengthen their bonds.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#register" class="bg-brand-accent hover:bg-orange-600 text-white font-bold py-4 px-8 rounded shadow-xl transition transform hover:scale-105 text-lg">
+                    Reserve My Spot
+                </a>
+                <a href="#program" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-dark font-bold py-4 px-8 rounded transition text-lg">
+                    View Agenda
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-brand font-bold uppercase tracking-wider text-sm">About the Workshop</span>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-8">
+                From Confusion to Clarity
+            </h2>
+            <div class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                <p class="mb-6">
+                    Family life can be chaotic. Between busy schedules and misunderstandings, we sometimes forget how to truly connect. This educational workshop is designed not just to teach theory, but to practice real tools you can use at your kitchen table tonight.
+                </p>
+                <p>
+                    You will learn how to structure family meetings, express feelings without blame, and listen with true empathy.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <div class="p-6 bg-brand-light rounded-xl">
+                    <i class="fa-regular fa-clock text-4xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Time Management</h3>
+                    <p class="text-sm">Learn to hold effective family meetings in just 10 minutes.</p>
+                </div>
+                <div class="p-6 bg-brand-light rounded-xl">
+                    <i class="fa-regular fa-heart text-4xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Emotional Expression</h3>
+                    <p class="text-sm">Master the art of "I-Messages" to avoid unnecessary conflict.</p>
+                </div>
+                <div class="p-6 bg-brand-light rounded-xl">
+                    <i class="fa-solid fa-people-roof text-4xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Family Unity</h3>
+                    <p class="text-sm">Special strategies for active listening within the family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Agenda -->
+    <section id="program" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark">Workshop Program</h2>
+                <p class="mt-4 text-gray-600">Three consecutive weeks of learning and growth.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Session 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row transform transition hover:shadow-xl">
+                    <div class="bg-brand p-8 md:w-1/4 flex flex-col justify-center items-center text-white text-center">
+                        <span class="text-5xl font-bold">1</span>
+                        <span class="text-xl mt-2 font-serif">Running a Short Family Meeting</span>
+                        <span class="mt-4 bg-brand-dark px-3 py-1 rounded text-sm">Tue, Oct 14</span>
+                    </div>
+                    <div class="p-8 md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Structuring Family Time</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-brand mb-2"><i class="fa-solid fa-bullseye mr-2"></i>Objectives</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Explain the purpose of short family meetings and when they are useful.</li>
+                                    <li>Demonstrate how to lead a brief meeting using structure, time limits, and collaborative decision making.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand mb-2"><i class="fa-solid fa-puzzle-piece mr-2"></i>Activities</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Story contrasting chaos vs. calm in communication.</li>
+                                    <li>Diagram explaining the structure of a 10-minute meeting.</li>
+                                    <li>Group discussion: What happens when there is no structure to solve problems?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row transform transition hover:shadow-xl">
+                    <div class="bg-brand-dark p-8 md:w-1/4 flex flex-col justify-center items-center text-white text-center">
+                        <span class="text-5xl font-bold">2</span>
+                        <span class="text-xl mt-2 font-serif">“I-Messages” to Share Feelings</span>
+                        <span class="mt-4 bg-gray-800 px-3 py-1 rounded text-sm">Tue, Oct 21</span>
+                    </div>
+                    <div class="p-8 md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Expressing Feelings Effectively</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-brand mb-2"><i class="fa-solid fa-bullseye mr-2"></i>Objectives</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Explain what an "I-Message" is and how it improves communication.</li>
+                                    <li>Differentiate between "I-Messages" and "You-Messages" and their effects on relationships.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand mb-2"><i class="fa-solid fa-puzzle-piece mr-2"></i>Activities</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Humorous story about a daily misunderstanding.</li>
+                                    <li>Mini-lesson on the structure of the "I-Message".</li>
+                                    <li>Discussion on why "You-Messages" (accusations) generate conflict.</li>
+                                    <li>Practical demo: Converting a "You-Message" into an "I-Message".</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row transform transition hover:shadow-xl">
+                    <div class="bg-brand p-8 md:w-1/4 flex flex-col justify-center items-center text-white text-center">
+                        <span class="text-5xl font-bold">3</span>
+                        <span class="text-xl mt-2 font-serif">Improving Family Communication</span>
+                        <span class="mt-4 bg-brand-dark px-3 py-1 rounded text-sm">Tue, Oct 28</span>
+                    </div>
+                    <div class="p-8 md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Blended Families & Active Listening</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-brand mb-2"><i class="fa-solid fa-bullseye mr-2"></i>Objectives</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Teach and practice how to listen actively with empathy.</li>
+                                    <li>Encourage eye contact and paraphrasing to ensure mutual understanding.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand mb-2"><i class="fa-solid fa-puzzle-piece mr-2"></i>Activities</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Screening of the video "It’s Not About the Nail" and discussion.</li>
+                                    <li>Role-play demonstrating "Fix-It Mode" vs. "Active Listening Mode".</li>
+                                    <li>Pair practice reinforcing empathy, eye contact, and paraphrasing.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics Section -->
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Details -->
+                <div class="space-y-8">
+                    <h2 class="font-serif text-3xl font-bold text-brand-dark">Event Details</h2>
+                    <p class="text-gray-600 text-lg">
+                        The workshop will be held in a relaxed environment accessible to everyone. Writing materials and light refreshments will be provided.
+                    </p>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-brand-light p-3 rounded-full">
+                            <i class="fa-regular fa-calendar-check text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Dates</h4>
+                            <p class="text-gray-600">Three consecutive Tuesdays:<br>October 14, 21, and 28, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-brand-light p-3 rounded-full">
+                            <i class="fa-regular fa-clock text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Time</h4>
+                            <p class="text-gray-600">6:00 PM – 7:15 PM (75 minutes)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-brand-light p-3 rounded-full">
+                            <i class="fa-solid fa-location-dot text-brand text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Location</h4>
+                            <p class="text-gray-600">
+                                The Church of Jesus Christ of Latter-day Saints<br>
+                                Llano del Medio Centro 250, Las Lomas<br>
+                                David, Chiriquí
+                            </p>
+                            <p class="text-sm text-gray-500 mt-1">Free parking available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-2xl overflow-hidden shadow-lg h-96 bg-gray-200 relative">
+                     <!-- Updated map centering on the approximate location in David, Chiriqui -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=The%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints%20Las%20Lomas%20David%20Chiriqui&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="absolute bottom-4 left-4 bg-white p-2 rounded shadow text-xs text-gray-500">
+                        *Illustrative Map
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration CTA -->
+    <section id="register" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Decoration circles -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-white opacity-5"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand opacity-20"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Reserve Your Spot</h2>
+                <p class="text-brand-light text-lg">Space is limited to ensure a personalized experience. <br>Secure your participation today!</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-2xl text-gray-800">
+                <form id="registrationForm" onsubmit="handleRegister(event)">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="name">Full Name</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition" id="name" type="text" placeholder="Your name" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="email">Email Address</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition" id="email" type="email" placeholder="example@email.com" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="phone">Phone Number</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition" id="phone" type="tel" placeholder="(555) 123-4567">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="attendees">Number of Attendees</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition" id="attendees">
+                                <option>1 Person</option>
+                                <option>2 People (Couple)</option>
+                                <option>3+ Family</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <button type="submit" class="w-full md:w-auto bg-brand-accent hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-lg shadow-lg transition transform hover:-translate-y-1">
+                            Confirm Registration
+                        </button>
+                        <p class="text-xs text-gray-500 mt-4">Your data is safe and will not be shared.</p>
+                    </div>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="hidden text-center py-10">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-check text-green-500 text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Registration Successful!</h3>
+                    <p class="text-gray-600 mt-2">Thanks for signing up. We've sent the details to your email.</p>
+                    <button onclick="resetForm()" class="mt-6 text-brand font-bold underline">Register another person</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa-solid fa-hands-holding-circle text-brand text-2xl"></i>
+                        <span class="font-serif font-bold text-xl text-white">Family Connection</span>
+                    </div>
+                    <p class="text-sm opacity-70">
+                        Dedicated to strengthening family relationships through education, empathy, and effective communication.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Direct Contact</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-envelope mr-2 text-brand"></i> arlenyhineztroza@gmail.com</li>
+                        <li><i class="fa-solid fa-phone mr-2 text-brand"></i> +507 6168-8270</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand transition"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm opacity-50">
+                &copy; 2025 Family Connection Workshop. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Registration Form Handling
+        function handleRegister(e) {
+            e.preventDefault();
+            // Simulate API call/processing
+            const button = e.target.querySelector('button');
+            const originalText = button.innerText;
+            
+            button.innerText = 'Processing...';
+            button.disabled = true;
+
+            setTimeout(() => {
+                document.getElementById('registrationForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
+                button.innerText = originalText;
+                button.disabled = false;
+            }, 1500);
+        }
+
+        function resetForm() {
+            document.getElementById('registrationForm').reset();
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('registrationForm').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
